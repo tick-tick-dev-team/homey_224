@@ -3,15 +3,20 @@ package com.ticktack.homey_test.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.ticktack.homey_test.domain.Member;
 import com.ticktack.homey_test.repository.MemberRepository;
 import com.ticktack.homey_test.repository.MemoryMemberRepository;
+
 
 public class MemberService {
 	
 	private final MemberRepository memberRepo;
 	
 	// repo를 외부에서 넣어주게 변경
+	
 	public MemberService(MemberRepository memberRepo) {
 		this.memberRepo = memberRepo;
 	}

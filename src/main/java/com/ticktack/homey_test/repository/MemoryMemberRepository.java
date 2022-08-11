@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import com.ticktack.homey_test.domain.Member;
+
 
 public class MemoryMemberRepository implements MemberRepository{
 	
@@ -34,7 +37,9 @@ public class MemoryMemberRepository implements MemberRepository{
 	public Optional<Member> findByName(String name) {
 		
 		// java filter : 조건에 맞는 객체 찾으면 반환, 없으면 optional로 감싸서 반환됨
-		return store.values().stream().filter(member -> member.getName().equals(name)).findAny();
+		return store.values().stream()
+				.filter(member -> member.getName().equals(name))
+				.findAny();
 	}
 
 	@Override
