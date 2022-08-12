@@ -19,6 +19,15 @@ dependencies {
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	testImplementation('org.springframework.boot:spring-boot-starter-test:2.2.2.RELEASE') {
+        exclude group: 'junit'
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.5.2')
+    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.5.2')
+    testImplementation('org.junit.jupiter:junit-jupiter-params:5.5.2')	
 }
 
 tasks.named('test') {
