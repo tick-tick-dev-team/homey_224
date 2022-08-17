@@ -20,6 +20,9 @@ public class MemberController {
 	public MemberController(MemberService memberService) {
 		super();
 		this.memberService = memberService;
+		
+		// aop 사용 후 프록시 service 확인
+		//System.out.println("memberService = " + memberService.getClass());
 	}
 	
 	// 회원가입
