@@ -5,12 +5,13 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ticktack.homey_test.domain.Member;
 import com.ticktack.homey_test.repository.MemberRepository;
 import com.ticktack.homey_test.repository.MemoryMemberRepository;
 
-
+@Transactional
 public class MemberService {
 	
 	private final MemberRepository memberRepo;
