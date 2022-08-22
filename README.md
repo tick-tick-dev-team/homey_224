@@ -62,4 +62,5 @@ spring.datasource.password=
 ```
 
 ### 3. 프로젝트 실행 혹은 통합테스트 실행
+- 실행 전 DB인 H2가 실행되고 
 - 통합테스트 : `MemberServiceIntegrationTest` 파일 실행
